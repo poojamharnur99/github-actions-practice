@@ -13,6 +13,7 @@ jobs:
       - name: Show OS
         run: |
               echo "This job is running on an Ubuntu runner."
+              echo "event name: ${{github.event_name}}"
   windows-echo:
     runs-on: windows-latest
     steps:
