@@ -25,13 +25,13 @@ jobs:
     steps:
       - name: Build
         run: |
-              echo "Building from tag ${{github.events.inputs.tag}}"
+              echo "Building from tag ${{github.event.inputs.tag}}"
 
       
   Deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy
-        if: ${{success()}} && ${{github.events.inputs.dry-run}} == 'false'
+        if: ${{success()}} && ${{github.event.inputs.dry-run}} == 'false'
         run: |
-              echo "Deploying to ${{github.events.inputs.target}}"
+              echo "Deploying to ${{github.event.inputs.target}}"
