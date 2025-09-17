@@ -1,24 +1,24 @@
-name: 03 - Workflow Runners
-on: 
-  push:
-  pull_request:
-  workflow_dispatch:
+# name: 03 - Workflow Runners
+# on: 
+#   push:
+#   pull_request:
+#   workflow_dispatch:
 
-jobs:
-  ubuntu-echo:
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Show OS
-        run: |
-              echo "This job is running on an Ubuntu runner."
-              echo "event name: ${{github.event_name}}"
-  windows-echo:
-    runs-on: windows-latest
-    steps:
-      - name: Show OS
-        shell: bash
-        run: |
-              echo "This job is running on a Windows runner."
+# jobs:
+#   ubuntu-echo:
+#     runs-on: ubuntu-latest
+#     steps: 
+#       - name: Show OS
+#         run: |
+#               echo "This job is running on an Ubuntu runner."
+#               echo "event name: ${{github.event_name}}"
+#   windows-echo:
+#     runs-on: windows-latest
+#     steps:
+#       - name: Show OS
+#         shell: bash
+#         run: |
+#               echo "This job is running on a Windows runner."
 
 
 
